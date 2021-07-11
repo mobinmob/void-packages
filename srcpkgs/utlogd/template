@@ -1,0 +1,18 @@
+# Template file for 'utlogd'
+pkgname=utlogd
+version=0.0.1.0
+revision=1
+build_style=configure
+configure_args=" --exec-prefix=/usr"
+wrksrc="${pkgname}-v${version}"
+hostmakedepends="lowdown"
+short_desc="Login/logout user daemon tracker"
+maintainer="mobinmob <mobinmob@disroot.org>"
+license="ISC"
+homepage="https://web.obarun.org/software/utlogd/latest/"
+distfiles="https://framagit.org/Obarun/utlogd/-/archive/v${version}/utlogd-v${version}.tar.bz2"
+checksum=14dee2a3942441a8b75e23cd8c69deb05856a927adcca7b023ce461d71efc136
+
+post_install() {
+	vlicense LICENSE
+}
