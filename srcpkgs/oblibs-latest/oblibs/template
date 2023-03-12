@@ -1,0 +1,28 @@
+# Template file for 'oblibs'
+pkgname=oblibs
+version=0.1.4.0.0.1
+_upstr_branch=master
+revision=1
+build_style=configure
+configure_args="--prefix=/usr --libdir=/usr/lib --with-sysdeps=${XBPS_CROSS_BASE}/usr/lib/skalibs/sysdeps"
+makedepends="skalibs-devel execline-devel"
+short_desc="Obarun library"
+maintainer="mobinmob <mobinmob@disroot.org>"
+license="ISC"
+homepage="https://git.obarun.org/Obarun/oblibs"
+distfiles="https://git.obarun.org/Obarun/oblibs/-/archive/${_upstr_branch}/oblibs-${_upstr_branch}.tar.bz2"
+checksum=d4aebbe16fef9bf169dcba8684f181d55c27ac3894de18af3e050f32243a0e72
+
+post_install() {
+	vlicense LICENSE
+}
+
+oblibs-devel_package() {
+	depends="${makedepends} ${sourcepkg}-${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove "usr/lib/*.a"
+		vmove usr/include/oblibs
+		vmove "usr/lib/*.so"
+	}
+}
