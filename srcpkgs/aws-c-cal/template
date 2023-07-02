@@ -1,0 +1,14 @@
+# Template file for 'aws-c-cal'
+pkgname=aws-c-cal
+version=0.6.0
+revision=1
+build_style=cmake
+#configure_args=" -DBUILD_SHARED_LIBS=ON"
+hostmakedepends="pkg-config"
+makedepends="openssl-devel aws-c-common"
+short_desc="Aws Cross-Platform, C99 wrapper for cryptography primitives"
+maintainer="mobinmob <mobinmob@disroot.org>"
+license="Apache-2.0"
+homepage="https://github.com/awslabs/aws-c-cal"
+distfiles="https://github.com/awslabs/aws-c-cal/archive/refs/tags/v${version}.tar.gz"
+checksum=8ca18bc22fbe4b4d0c3c7ff6e2a5f2bb24f0b897f64cc584b06a7aab98b2304e

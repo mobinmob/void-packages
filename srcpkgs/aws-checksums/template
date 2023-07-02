@@ -1,0 +1,14 @@
+# Template file for 'aws-checksums'
+pkgname=aws-checksums
+version=0.1.16
+revision=1
+build_style=cmake
+#configure_args=" -DBUILD_SHARED_LIBS=ON"
+hostmakedepends="pkg-config"
+makedepends="aws-c-common"
+short_desc="Cross-Platform HW accelerated CRC32c and CRC32"
+maintainer="mobinmob <mobinmob@disroot.org>"
+license="Apache-2.0"
+homepage="https://github.com/awslabs/aws-checksums/tree/v0.1.16"
+distfiles="https://github.com/awslabs/aws-checksums/archive/refs/tags/v${version}.tar.gz"
+checksum=cce88d8ef1e957575f2fbfc149831385993365a7807206aee85a0b23bf649392

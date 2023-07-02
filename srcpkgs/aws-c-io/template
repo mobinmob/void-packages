@@ -1,0 +1,14 @@
+# Template file for 'aws-c-io'
+pkgname=aws-c-io
+version=0.13.27
+revision=1
+build_style=cmake
+#configure_args=" -DBUILD_SHARED_LIBS=ON"
+hostmakedepends="pkg-config"
+makedepends="aws-c-cal aws-c-common s2n-tls-devel"
+short_desc="Module for the AWS C SDK ( IO and TLS )"
+maintainer="mobinmob <mobinmob@disroot.org>"
+license="Apache-2.0"
+homepage="https://github.com/awslabs/aws-c-io"
+distfiles="https://github.com/awslabs/aws-c-io/archive/refs/tags/v${version}.tar.gz"
+checksum=267ced7f4d5b06418bcbed661dae6c54d0a2282ac03a4311a7aed80dae7599b4

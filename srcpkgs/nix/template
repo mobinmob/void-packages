@@ -1,7 +1,7 @@
 # Template file for 'nix'
 pkgname=nix
-version=2.11.0
-revision=6
+version=2.16.0
+revision=1
 build_style=gnu-configure
 build_helper=qemu
 # Use /nix/var as suggested by the official Manual.
@@ -22,7 +22,7 @@ license="LGPL-2.1-or-later"
 homepage="https://nixos.org/nix/"
 changelog="https://nixos.org/releases/${pkgname}/${pkgname}-${version}/manual/#sec-relnotes"
 distfiles="https://github.com/NixOS/nix/archive/refs/tags/${version}.tar.gz"
-checksum=6a90e144352eaccfab7ef7ed470bad382c4f92d62336b327df99627adba67a7c
+checksum=c2241a7899f40670a3ba58c6df8b8505d35aa26098b955dfee94353184dc7425
 # disable_parallel_build="build is fine, only linking test"
 
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
